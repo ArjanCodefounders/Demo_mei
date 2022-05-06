@@ -1,0 +1,86 @@
+<style>
+
+
+</style>
+
+
+
+
+<script>
+    function checkage(){
+        var leeftijd
+        leeftijd = document.getElementById("invoer").value;
+        if (leeftijd < 18){
+            console.log ("je mag niet drinken");
+
+            document.getElementById("uitvoer").innerHTML= ("je mag  niet drinken");
+            
+           
+
+        }
+        else {
+             console.log ("Je mag drinken");
+             document.getElementById("uitvoer").innerHTML= ("je mag drinken");
+             document.getElementById("uitvoer").style.backgroundColor = 'green';
+             
+        }
+
+
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+<input type = "tekst" id ="invoer">
+<input type = "button" value ="check" onclick = "checkage()">
+<br><br><div id = "uitvoer">check</div>
+
+
+
+
+
+
+
+
+<title>Leeftijdscheck</title>
+
+<br><br><br><br><br><hr>
+Maak een tekst-invoer veld<br>
+Maak een button</br>
+Maak een div<br>
+Voer een leeftijd in<br>
+Wanneer de leeftijd lager dan 18 is, wordt de div rood en wordt de tekst "niet toegestaan"<br>
+Wanneer de leeftijd hoger is dan 18, wordt de div groen en wordt de tekst "toegestaan"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
