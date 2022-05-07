@@ -1,0 +1,120 @@
+<style>
+#knopa{
+    background-color: red;
+}
+#knopb{
+    background-color: lightblue;
+}
+#knopc{
+    background-color: yellow;
+}
+#knopd{
+    background-color: orange;
+}
+</style>
+
+
+
+<script>
+    var totaalF = 0;
+    var totaalA=0;
+    var totaalB=0;
+    // argument parameter += inner html en globae variabelen
+    function wegschrijven(  letter ){
+        document.getElementById("gekliktop").innerHTML += "U heeft op "+letter+" geklikt<br>"; 
+        //totaal ++;
+        console.log(totaalA +"<>"+ totaalB);
+        
+        if(letter == 'A'){
+            totaalA++;
+            if (totaalA >1){
+                alert ("U heeft al een keer op A geklikt")
+            }            
+        }
+       
+
+        if(letter == 'B'){
+            totaalB++;
+            if (totaalB >1){
+                alert ("U heeft al een keer op B geklikt")
+            }
+           
+        }
+
+
+        console.log(totaalA +"<-->"+ totaalB);
+
+    }
+
+       
+
+
+        
+    
+
+
+        
+    
+    function go(){
+        totaalF++;
+        console.log(totaalF);
+        if(totaalF == 5){
+            alert("zo is het wel genoeg");
+        }
+    }
+
+// ('A') of letter pakken  / innerhtml u heeft op a geklikt pakken ?
+// optellen bij totaal
+// if (totaal>1)
+// alert
+
+    
+      
+</script>
+
+
+
+
+<input type = "button" value = "Knop A" id = "knopa" onclick = "wegschrijven('A')">
+<input type = "button" value = "Knop B" id = "knopb" onclick = "wegschrijven('B')">
+<input type = "button" value = "Knop C" id = "knopc" onclick = "wegschrijven('C')">
+<input type = "button" value = "Knop D" id = "knopd" onclick = "wegschrijven('D')">
+<input type="button" onclick="go()" value="Felix">
+<br><br><br><hr>
+<div id = "gekliktop"></div>
+
+
+<Title>Knop Historie_deel2</Title>
+<br><br>
+<hr>
+<b>De opdracht</b>
+<br>
+
+Maak 4 knoppen naast elkaar.<br><br>
+Op de ene knop staat A, 
+de andere B
+die daarnaast C 
+en die daarnaast D.
+<br><br>
+Op het moment dat je op knop C van de knoppen klikt verschijnt er in een div:<br>
+U heeft op knop C geklikt.
+<br><br>
+Op het moment dat je op knop D klikt verschijnt er in een div.<br>
+U heeft op knop C geklikt.<br>
+U heeft op knop D geklikt.
+<br>
+<br>
+Hij houd dus jouw knop-klik history bij.
+<br><br>
+Maar als je hierna op C klikt;<br>
+Verschijnt er een alert:<b> U heeft al een keer op C geklikt.</b>
+
+<br>en verschijnt er in een div.
+<br><br>
+U heeft op knop C geklikt.
+<br>U heeft op knop D geklikt.
+<br>U heeft op knop C geklikt.
+<br><br><hr>
+
+<b>ADVANCED</b> <br><br>De alert vertelt je hoe vaak je al op C had geklikt.
+LET OP: Als je de browser refreshed is alles weer leeg.
