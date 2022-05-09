@@ -21,14 +21,13 @@
    
     var afstand
     afstand  = document.getElementById ("aantalkm").value;
-    document.getElementById("geredenkm").innerHTML = "U heeft  +(afstand) gereden" ;
+    document.getElementById("geredenkm").innerHTML = "U heeft"  + (afstand)+  "gereden";
     console.log (ritdatum);
 
 
-
-    var activiteit
-    activiteit = document.getElementByID ("type").value;
-    document.getElementById ("soort").innerHTML = "u heeft gereden op  " +(activiteit);
+    //var activiteit
+    //activiteit = document.getElementByID ("type").value;
+    //document.getElementById ("soort").innerHTML = "u heeft gereden op  " +(activiteit);
 
   
 
@@ -45,13 +44,14 @@
 
 </script>
 
-<b>De opdracht</b> <br><br>
-Maak een pagina met daarop de volgende items:<br><br>
-- Datum kiezen<br>
+<b>Ritgegevens</b> <br><br>
+<br><br>
 - Routenaam<br>
+- Datum<br>
+- Gemiddelde snelheid<br>
 - Afstand<br>
-- Gemiddelde score<br>
 - Intensiteit op schaal van 0 tot 10 <br>
+- Type activiteit<br>
 
 
 
@@ -72,6 +72,22 @@ Maak een pagina met daarop de volgende items:<br><br>
 <label for="mountain">Mountainbike</label><br>
 <input type="radio" id="type" name="fav_language" value="Gravelbike">
 <label for="gravel">Gravelbike</label>
+<br><br><br>
+
+<div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">gemakkelijk</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">redelijk gemakkelijk</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">gemiddeld</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">zwaar</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">zeer zwaar</label>
+  </div>
+
+
   
 
 
