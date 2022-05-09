@@ -7,6 +7,38 @@
 
 
 <script>
+    function routeweergeven(){
+    var startpunt
+    startpunt = document.getElementById("routenaam").value;
+    document.getElementById ("startpunt").innerHTML = " U bent vertrokken vanuit  " +(startpunt);
+    console.log (startpunt);
+    
+    
+    var ritdatum
+    ritdatum = document.getElementById ("datum").value;
+    document.getElementById("ritdatum").innerHTML = "U bent vertrokken op  " +(ritdatum);
+    console.log (ritdatum);
+   
+    var afstand
+    afstand  = document.getElementById ("aantalkm").value;
+    document.getElementById("geredenkm").innerHTML = "U heeft  +(afstand) gereden" ;
+    console.log (ritdatum);
+
+
+
+    var activiteit
+    activiteit = document.getElementByID ("type").value;
+    document.getElementById ("soort").innerHTML = "u heeft gereden op  " +(activiteit);
+
+  
+
+    }
+
+    
+
+
+
+    
 
 
 
@@ -29,15 +61,29 @@ Maak een pagina met daarop de volgende items:<br><br>
 
 
 
-<input type = "text" id="routenaam" value ="voer routenaam in" > <br><br>
+<input type = "text" id="routenaam" value => <br><br>
 <input type = "date" id="datum"><br><br>
-<inpput type = "text" >
-<input type = "checkbox" id="gravel" value="gravel">
-<input type = "checkbox" id="gravel" value="gravel">
-<input type = "checkbox" id="gravel" value="gravel">
+<input type ="text" id="sneheid" value = "KM/H"><br><br>
+<input type ="text" id="aantalkm" value = "afstand"><br><br>
+
+<input type="radio" id="type" name="fav_language" value="Racefiets">
+<label for="race">Racefiets</label><br>
+<input type="radio" id="type" name="fav_language" value="Mountainbike">
+<label for="mountain">Mountainbike</label><br>
+<input type="radio" id="type" name="fav_language" value="Gravelbike">
+<label for="gravel">Gravelbike</label>
+  
+
+
+
 <br><br><br><br>
 
-<input type ="button" onclick="Routeweergeven()" value = "sla route op">
+<input type ="button" onclick="routeweergeven()" value = "sla route op">
+<br><br>
+<div id ="startpunt"></div>
+<div id= "ritdatum"></div>
+<div id = "soort"></div>
+<div id = "geredenkm"></div>
 
 
 
