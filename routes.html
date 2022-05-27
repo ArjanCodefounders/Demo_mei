@@ -10,7 +10,7 @@
     function routeweergeven(){
     var startpunt
     startpunt = document.getElementById("routenaam").value;
-    document.getElementById ("startpunt").innerHTML += " U bent vertrokken vanuit  " +(startpunt);
+    document.getElementById ("startpunt").innerHTML += " U bent vertrokken vanuit  " +(startpunt)+ ".";
 
     
     var ritdatum
@@ -20,42 +20,36 @@
 
     var afstand
     afstand  = document.getElementById ("aantalkm").value;
-    document.getElementById("geredenkm").innerHTML += "U heeft  "  + (afstand)+  " km gereden";
+    document.getElementById("geredenkm").innerHTML += "U heeft  "  + (afstand)+  " km gereden.";
    
 
     var snelheid
     snelheid  = document.getElementById ("kmh").value;
-    document.getElementById("gemiddeldesnelheid").innerHTML += "U heeft  "  + (snelheid )+  " Km / H gereden";
+    document.getElementById("gemiddeldesnelheid").innerHTML += "U heeft  "  + (snelheid )+  " Km/h gereden.";
    
     var type
     type = document.querySelector('input[name="biketype"]:checked').value;
-    document.getElementById('soortfiets').innerHTML += " U heeft op een " + (type) + " gereden";
+    document.getElementById('soortfiets').innerHTML += " U heeft op een " + (type) + " gereden.";
 
     var intens
     intens = document.querySelector('input[name="rate"]:checked').value;
-    document.getElementById("intensiteit").innerHTML += " U heeft de rit als" + (intens)+ " ervaren"; 
+    document.getElementById("intensiteit").innerHTML += " U heeft de rit als " + (intens)+ " ervaren."; 
 
-
+    }
       if (!document.getElementById("routenaam").value ){
-      document.getElementById("routenaam").style.border='5px solid red';
-      alert  ("alle velden dienen ingevuld te zijn");
+        document.getElementById("routenaam").style.border='5px solid red';
+        alert  ("voer routenaam in");
    }
-  }
-     //if  (!document.getElementById("aantalkm").value ){
-       //document.getElementById("aantalkm").style.border='5px solid red';
-     //}
+  
+    // if  (!document.getElementById("aantalkm").value ){
+      // document.getElementById("aantalkm").style.border='5px solid red';
+     // alert ("voer aantal km's in");
+    // }
    
    
-     
-
-
-   
-       
- 
-
 // alle velden dienen ingevuld te zijn. Indien een veld  niet is ingevuld komt er een
 //alert en kleurt het element rood.
-// alle div worden opgeslagen.
+
 // je kan zoeken op afstand, type route, intensiteit, etc etc 
 // hoe handiger met gebruik parameters ? 
   
@@ -79,12 +73,16 @@
 <br><br><br><hr><br><br>
 
 
-
+<b>Vertrekpunt<b><br><br>
 <input type = "text" id="routenaam" value> <br><br>
+<b>datum<b></b><br><br>
 <input type = "date" id="datum"><br><br>
+<b>snelheid<b></b><br><br>
 <input type ="text" onfocus="this.value=''"id="kmh" value = "KM/H"><br><br>
+<b>afstand<b><br><br>
 <input type ="text" onfocus="this.value=''"id="aantalkm" value = "afstand"><br><br>
 
+type activiteit<br><br>
 <input type="radio" id="type" name="biketype" value="Racefiets">
 <label for="race">Racefiets</label><br>
 <input type="radio" id="type" name="biketype" value="Mountainbike">
@@ -92,6 +90,8 @@
 <input type="radio" id="type" name="biketype" value="Gravelbike">
 <label for="gravel">Gravelbike</label>
 <br><br><br>
+
+Intenstiteit<br><br>
 
  <div class="rate">
     <input type="radio" id="star5" name="rate" value="gemakkelijk" />
